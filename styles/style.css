@@ -176,6 +176,10 @@
 .gold_fish {
   grid-template-columns: repeat(3, 1fr);
 
+  > .second_title {
+    grid-row: 1 / 3;
+  }
+
   > .article {
     display: grid;
     grid-column: 2 / 4;
@@ -185,5 +189,10 @@
   > .title-decor {
     display: grid;
     grid-column: 2 / 4;
+    grid-row: 1;
   }
+}
+
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
 }
