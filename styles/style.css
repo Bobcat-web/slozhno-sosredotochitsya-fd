@@ -20,6 +20,13 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 0;
+}
+
 .header__theme-menu {
   justify-self: center;
   height: auto;
@@ -144,7 +151,6 @@
   display: grid;
   column-gap: 20px;
   row-gap: 20px;
-  padding: 60px 0px;
   align-items: start;
 }
 
