@@ -64,7 +64,6 @@
   font-weight: bold;
   line-height: 23.4px;
   color: #ff0070;
-  display: inline-block;
 }
 
 .title-decor {
@@ -151,9 +150,6 @@
 }
 
 .attention {
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(3, auto);
-
   > .article {
     display: grid;
     grid-row: 2 / 2;
