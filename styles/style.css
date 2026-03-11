@@ -13,8 +13,8 @@
 }
 
 .header {
-  height: 100vh;
-  min-height: 768px;
+  block-size: 100vh;
+  min-block-size: 97vh;
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -64,6 +64,14 @@
   font-weight: bold;
   line-height: 23.4px;
   color: #ff0070;
+  align-self: start;
+}
+
+.third_title {
+  font-size: 18px;
+  font-family: "IBM Plex mono", sans-serif;
+  font-weight: 400;
+  line-height: 23.4px;
 }
 
 .title-decor {
@@ -137,22 +145,39 @@
   column-gap: 20px;
   row-gap: 20px;
   padding: 60px 0px;
+  align-items: start;
 }
 
 .difficults {
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, 1fr);
 
   > .article {
     display: grid;
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     gap: 10px;
   }
 }
 
 .attention {
+  grid-template-columns: repeat(3, 1fr);
   > .article {
     display: grid;
-    grid-row: 2 / 2;
+    grid-row: 2 / 3;
     gap: 10px;
+  }
+}
+
+.gold_fish {
+  grid-template-columns: repeat(3, 1fr);
+
+  > .article {
+    display: grid;
+    grid-column: 2 / 4;
+    gap: 10px;
+  }
+
+  > .title-decor {
+    display: grid;
+    grid-column: 2 / 4;
   }
 }
