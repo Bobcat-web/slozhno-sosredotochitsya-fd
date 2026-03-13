@@ -239,8 +239,8 @@
   position: relative;
   display: grid;
   justify-content: center;
-  height: 100vh;
-  min-height: 668px;
+  block-size: 100vh;
+  min-block-size: 97vh;
 }
 
 a {
