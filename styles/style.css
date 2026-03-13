@@ -58,6 +58,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  border: 1px solid var(--accent-color);
 }
 
 .first_title {

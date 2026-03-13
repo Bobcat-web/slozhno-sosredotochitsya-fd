@@ -15,3 +15,17 @@
   --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
 }
+.theme-light .dec_rec_darkTheme {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --heading-color: #ffc2e6;
+    --text-color: #353430;
+    --background-color: #fff1f7;
+    --background-image: url(../images/cover-image-light.png);
+    /* Дублируем только те же переменные, что и выше */
+  }
+}
