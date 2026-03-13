@@ -28,13 +28,13 @@
 
 .header__theme-menu {
   justify-self: end;
+  align-self: end;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 75px;
 }
 
 .header__theme-menu-button {
@@ -230,6 +230,96 @@ a:focus-visible {
   border: 1px solid var(--text-color);
 }
 
+@media (min-width: 768px) {
+  .header_description {
+    width: 364px;
+    height: 117px;
+    justify-self: end;
+    align-self: self-start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dec_rec_darkTheme {
+    top: 5px;
+    right: 35px;
+  }
+
+  .difficults {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .difficults > .second_title {
+    grid-column: 1;
+  }
+
+  .difficults > .article {
+    grid-column: 2;
+  }
+
+  .gold_fish {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .gold_fish > .second_title {
+    grid-column: 1;
+  }
+
+  .gold_fish > .title-decor {
+    grid-column: 2;
+  }
+
+  .gold_fish > .article {
+    grid-column: 2;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .gallery > .second_title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .gallery > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .gallery .sunset {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .gallery .ice-cream {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  .gallery .books {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .gallery .tape {
+    grid-column: 1;
+    grid-row: 3 / 5;
+  }
+
+  .gallery .street {
+    grid-column: 2 / 4;
+    grid-row: 4;
+  }
+}
+
 @media (min-width: 1024px) {
   .page {
     padding: 20px;
@@ -246,6 +336,7 @@ a:focus-visible {
 
   .header__theme-menu {
     justify-self: center;
+    align-self: start;
     height: auto;
   }
 
@@ -351,97 +442,6 @@ a:focus-visible {
       grid-column: 2 / 4;
       grid-row: 1;
     }
-  }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .gallery > .second_title {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-
-  .gallery > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .gallery .sunset {
-    grid-column: 1 / 3;
-    grid-row: 2;
-  }
-
-  .gallery .ice-cream {
-    grid-column: 3;
-    grid-row: 2 / 4;
-  }
-
-  .gallery .books {
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  .gallery .tape {
-    grid-column: 1;
-    grid-row: 3 / 5;
-  }
-
-  .gallery .street {
-    grid-column: 2 / 4;
-    grid-row: 4;
-  }
-}
-
-@media (min-width: 768px) {
-  .header_description {
-    width: 364px;
-    height: 117px;
-    justify-self: end;
-    align-self: self-start;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 192px;
-  }
-
-  .dec_rec_darkTheme {
-    top: 5px;
-    right: 35px;
-  }
-
-  .difficults {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .difficults > .second_title {
-    grid-column: 1;
-  }
-
-  .difficults > .article {
-    grid-column: 2;
-  }
-
-  .gold_fish {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .gold_fish > .second_title {
-    grid-column: 1;
-  }
-
-  .gold_fish > .title-decor {
-    grid-column: 2;
-  }
-
-  .gold_fish > .article {
-    grid-column: 2;
   }
 
   .gallery {
