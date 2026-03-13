@@ -48,6 +48,18 @@
   color: var(--accent-color);
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
 .first_title {
   font-size: 157px;
   font-family: "IBM Plex mono", sans-serif;
@@ -253,5 +265,5 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 1px solid var(--text-color);
+  border: 1px solid var(--text-color);
 }
