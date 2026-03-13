@@ -185,11 +185,7 @@
 }
 
 .gold_fish {
-  grid-template-columns: repeat(3, 1fr);
-  > .second_title {
-    grid-column: 1 / 4;
-    gap: 10px;
-  }
+  grid-template-columns: 1fr;
 
   > .article {
     display: grid;
@@ -198,7 +194,6 @@
 
   > .title-decor {
     display: grid;
-    grid-row: 1;
   }
 }
 
