@@ -18,8 +18,7 @@ body {
 }
 
 .header {
-  block-size: 100vh;
-  min-block-size: 76vh;
+  block-size: 100%;
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -239,8 +238,7 @@ body {
   position: relative;
   display: grid;
   justify-content: center;
-  block-size: 100vh;
-  min-block-size: 76vh;
+  block-size: 100%;
   margin-top: 50px;
 }
 
@@ -262,8 +260,7 @@ a:focus-visible {
     padding: 20px;
   }
   .header {
-    block-size: 100vh;
-    min-block-size: 94vh;
+    block-size: 100%;
   }
   .main {
     margin-top: 40px;
@@ -388,7 +385,7 @@ a:focus-visible {
 
   .footer {
     margin-top: 82px;
-    block-size: 100vh;
+    block-size: 100%;
   }
 }
 
@@ -399,13 +396,12 @@ a:focus-visible {
 
   .header {
     grid-template-rows: repeat(3, 1fr);
-    block-size: 95vh;
-    min-block-size: 95vh;
+    block-size: 100%;
   }
 
   .footer {
     margin-top: 0;
-    block-size: 95vh;
+    block-size: 100%;
   }
 
   .main {
