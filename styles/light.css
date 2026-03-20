@@ -10,22 +10,27 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
-  --heading-color: #ffc2e6;
+  --h1-color: #ffc2e6;
+  --less-header-color: #353430;
   --text-color: #353430;
   --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
 }
-.theme-light .dec_rec_darkTheme {
+.theme-light .dec_rec_dark_theme {
   display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
-    --heading-color: #ffc2e6;
+    --h1-color: #ffc2e6;
+    --less-header-color: #353430;
     --text-color: #353430;
     --background-color: #fff1f7;
     --background-image: url(../images/cover-image-light.png);
     /* Дублируем только те же переменные, что и выше */
+  }
+  .dec_rec_dark_theme {
+    display: none;
   }
 }

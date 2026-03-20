@@ -19,6 +19,7 @@ body {
 
 .header {
   block-size: 100vh;
+  min-block-size: 668px;
   padding: 10px 10px 0 10px;
   position: relative;
   display: grid;
@@ -48,7 +49,7 @@ body {
   border: 0;
   background-color: transparent;
   font-size: 18px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: normal;
   text-transform: lowercase;
   color: var(--accent-color);
@@ -67,67 +68,69 @@ body {
   border: 1px solid var(--accent-color);
 }
 
-.first_title {
+.h1 {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: bold;
   line-height: 83%;
-  color: var(--heading-color);
+  color: var(--h1-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   align-self: flex-start;
   margin-top: 10px;
 }
 
-.footer > .first_title {
+.footer > .h1 {
   align-self: center;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.second_title {
+.h2 {
   font-size: 18px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: bold;
   line-height: 23.4px;
   color: var(--accent-color);
-  align-self: center;
+  align-self: start;
 }
 
 .header_description {
   margin-bottom: 30px;
 }
 
-.third_title {
+.h3 {
   font-size: 18px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
+  font-weight: bold;
+  line-height: 23.4px;
+  color: var(--accent-color);
+  align-self: center;
+}
+
+.h4 {
+  font-size: 18px;
+  font-family: "IBM Plex mono", monospace;
   font-weight: 400;
   line-height: 23.4px;
 }
 
 .title-decor {
   background-color: var(--accent-color);
-  color: var(--background-color);
-}
-
-.header_topic {
-  width: 491px;
-  height: 70px;
-  justify-self: end;
-  align-self: start;
+  color: var(--less-header-color);
 }
 
 .usual_text {
   font-size: 18px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: 400;
   line-height: 23.4px;
   color: var(--text-color);
 }
 
-.dec_rec_darkTheme {
+.dec_rec_dark_theme {
   font-size: 18px;
   line-height: 25px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: normal;
   color: var(--accent-color);
   position: absolute;
@@ -135,7 +138,7 @@ body {
   right: 40px;
 }
 
-.dec_rec_darkTheme::after {
+.dec_rec_dark_theme::after {
   content: "";
   position: absolute;
   width: 9px;
@@ -177,7 +180,7 @@ body {
   bottom: 20px;
 }
 
-.section_styling {
+.section {
   position: relative;
   display: grid;
   column-gap: 20px;
@@ -185,7 +188,7 @@ body {
   align-items: start;
 }
 
-.difficults {
+.section-why {
   grid-template-columns: 1fr;
 
   > .article {
@@ -194,7 +197,7 @@ body {
   }
 }
 
-.attention {
+.section-causes {
   grid-template-columns: 1fr;
   > .article {
     display: grid;
@@ -202,7 +205,7 @@ body {
   }
 }
 
-.gold_fish {
+.section-advices {
   grid-template-columns: 1fr;
 
   > .article {
@@ -252,19 +255,20 @@ body {
   display: grid;
   justify-content: center;
   block-size: 100vh;
+  min-block-size: 668px;
   margin: 50px 10px 0 10px;
 }
 
-a {
+.link {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
-a:hover {
+.link:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
-a:focus-visible {
+.link:focus-visible {
   border: 1px solid var(--text-color);
 }
 
@@ -278,19 +282,21 @@ a:focus-visible {
     gap: 80px;
   }
 
-  .first_title {
+  .h1 {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     align-self: center;
     margin-top: -34px;
     margin-left: -20px;
   }
 
-  .footer > .first_title {
+  .footer > .h1 {
     margin-left: 10px;
     margin-bottom: 40px;
   }
 
   .header_description {
-    width: 364px;
+    max-width: 364px;
+    width: 100%;
     justify-self: end;
     align-self: start;
     margin-top: 35px;
@@ -303,7 +309,7 @@ a:focus-visible {
     margin-top: 95px;
   }
 
-  .dec_rec_darkTheme {
+  .dec_rec_dark_theme {
     top: 20px;
     right: 50px;
   }
@@ -324,44 +330,44 @@ a:focus-visible {
     bottom: 20px;
   }
 
-  .attention {
+  .section-causes {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .attention > .article {
+  .section-causes > .article {
     grid-column: 1 /4;
   }
 
-  .difficults {
+  .section-why {
     grid-template-columns: 1fr 2fr;
   }
 
-  .difficults > .second_title {
+  .section-why > .second_title {
     grid-column: 1;
     align-self: start;
   }
 
-  .difficults > .article {
+  .section-why > .article {
     grid-column: 2;
   }
 
-  .gold_fish {
+  .section-advices {
     grid-template-columns: 1fr 2fr;
   }
 
-  .gold_fish > .second_title {
+  .section-advices > .second_title {
     grid-column: 1;
     grid-row: 1 / 3;
     align-self: start;
   }
 
-  .gold_fish > .title-decor {
+  .section-advices > .title-decor {
     grid-column: 2;
     align-self: start;
     grid-row: 1;
   }
 
-  .gold_fish > .article {
+  .section-advices > .article {
     grid-column: 2;
   }
 
@@ -444,31 +450,20 @@ a:focus-visible {
     margin: 0;
   }
 
-  .first_title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .header_description {
-    width: 491px;
-    height: 71px;
+    max-width: 491px;
+    width: 100%;
     margin-top: 44px;
     justify-self: end;
     align-self: start;
   }
 
-  .third_title {
-    font-size: 18px;
-    font-family: "IBM Plex mono", sans-serif;
-    font-weight: 400;
-    line-height: 23.4px;
-  }
-
   .title-decor {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--less-header-color);
   }
 
-  .dec_rec_darkTheme {
+  .dec_rec_dark_theme {
     top: 20px;
     right: 50px;
   }
@@ -484,7 +479,7 @@ a:focus-visible {
     border-left: 2px solid var(--accent-color);
   }
 
-  .difficults {
+  .section-why {
     grid-template-columns: repeat(3, 1fr);
 
     > .article {
@@ -494,40 +489,41 @@ a:focus-visible {
     }
   }
 
-  .attention {
+  .section-causes {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .attention > .second_title {
+  .section-causes > .h2 {
     grid-column: 1 / -1;
     grid-row: 1;
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
   }
 
-  .attention > .article {
+  .section-causes > .article {
     display: grid;
     gap: 10px;
   }
 
-  .attention > .article:nth-child(2) {
+  .section-causes > .article:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
 
-  .attention > .article:nth-child(3) {
+  .section-causes > .article:nth-child(3) {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .attention > .article:nth-child(4) {
+  .section-causes > .article:nth-child(4) {
     grid-column: 3;
     grid-row: 2;
   }
 
-  .gold_fish {
+  .section-advices {
     grid-template-columns: repeat(3, 1fr);
 
-    > .second_title {
+    > .h2 {
       grid-row: 1 / 3;
     }
 
@@ -549,7 +545,7 @@ a:focus-visible {
     gap: 20px;
   }
 
-  .gallery > .second_title {
+  .gallery > .h2 {
     grid-column: 1 / -1;
     grid-row: 1;
   }

@@ -11,19 +11,13 @@
   */
 
   --accent-color: #ff0070;
-  --heading-color: #db00ff;
+  --h1-color: #db00ff;
+  --less-header-color: #000028;
   --text-color: #f1b2ce;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: #ff0070;
-    --heading-color: #db00ff;
-    --text-color: #f1b2ce;
-    --background-color: #000028;
-    --background-image: url(../images/cover-image-dark.png);
-    /* Дублируем только те же переменные, что и выше */
+  .theme-dark .dec_rec_dark_theme {
+    display: block;
   }
 }
